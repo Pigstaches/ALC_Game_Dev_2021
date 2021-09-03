@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerComtroller : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     private float speed;
     private float turnSpeed;
