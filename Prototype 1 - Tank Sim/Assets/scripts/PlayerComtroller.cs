@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class PlayerComtroller : MonoBehaviour
 {
-    public float speed;
-    public float turnspeed;
+    private float speed;
+    private float turnspeed;
 
+    private float hInput;
+    private float vInput; 
     
     // Start is called before the first frame update
     void Start()
@@ -17,6 +19,11 @@ public class PlayerComtroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        hInput = Input.GetAxis("Horizontal");
+        vInput = Input.GetAxis("Vertical");
+
+        //moves tank forward
+        transform.Translate(Vector3.forward * speed * Time.deltaTime * vInput);
+        transform.Translate(Vector3.right * speed * Time.deltaTime * hInput);
     }
 }
