@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerComtroller : MonoBehaviour
 {
     private float speed;
-    private float turnspeed;
+    private float turnSpeed;
 
     private float hInput;
     private float vInput; 
@@ -19,11 +19,14 @@ public class PlayerComtroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // get horizontal and vertical inputs
         hInput = Input.GetAxis("Horizontal");
         vInput = Input.GetAxis("Vertical");
 
-        //moves tank forward
+
+        //moves tank forward back
         transform.Translate(Vector3.forward * speed * Time.deltaTime * vInput);
-        transform.Translate(Vector3.right * speed * Time.deltaTime * hInput);
+        //rootate tank left and right
+        transform.Rotate(Vector3.up, turnSpeed * hInput * Time.deltaTime );
     }
 }
