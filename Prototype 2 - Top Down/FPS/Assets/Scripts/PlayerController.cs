@@ -16,12 +16,16 @@ public class PlayerController : MonoBehaviour
     //gameObjects and components
     private Camera cam;
     private Rigidbody rb;
+    private Weapons weapons; 
 
     void Awake()
     {
         //get the components
         cam = Camera.main; 
         rb = GetComponent<Rigidbody>();
+        weapons = GetComponent<Weapons>();
+        //disable cursor
+        Cursor.lockState = CursorLockMode.Locked;
 
     }
 
@@ -33,7 +37,14 @@ public class PlayerController : MonoBehaviour
 
         if(Input.GetButtonDown("Jump"))
         Jump();
-    
+
+        if(Input.GetButtonDown("Fire1"))
+        {
+            if(weapons.CanShoot())
+            {
+                weapons.Shoot();
+            }
+        }
     }
 
     void Move()
