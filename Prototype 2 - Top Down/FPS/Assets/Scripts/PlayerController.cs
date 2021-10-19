@@ -36,9 +36,9 @@ public class PlayerController : MonoBehaviour
         CamLook();
 
         if(Input.GetButtonDown("Jump"))
-        Jump();
+            Jump();
 
-        if(Input.GetButtonDown("Fire1"))
+        if(Input.GetButton("Fire1"))
         {
             if(weapons.CanShoot())
             {
@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
         float x = Input.GetAxis("Horizontal") * moveSpeed;
         float z = Input.GetAxis("Vertical") * moveSpeed;
 
-        //rb.velocity = new Vector3(x, rb.velocity.y, z);
+        //Face directino of camera
         Vector3 dir = transform.right * x + transform.forward * z;
         //jump direction
         dir.y = rb.velocity.y;
