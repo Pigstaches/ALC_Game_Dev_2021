@@ -13,7 +13,7 @@ public class Weapons : MonoBehaviour
     public float shootRate;
     private float lastShootTime;
     private bool isPlayer;
-    private float bulletSpeed;
+    public float bulletSpeed;
 
     void Awake()
     {
