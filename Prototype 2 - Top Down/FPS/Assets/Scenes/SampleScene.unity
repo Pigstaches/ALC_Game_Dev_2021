@@ -345,7 +345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  jumpForce: 10
+  jumpForce: 2
   lookSensitivity: 5
   maxLookX: 45
   minLookX: -45
@@ -558,6 +558,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1530034948}
+  - component: {fileID: 1530034949}
   m_Layer: 0
   m_Name: muzzle
   m_TagString: Untagged
@@ -579,6 +580,25 @@ Transform:
   m_Father: {fileID: 1511848261}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1530034949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530034947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4c8275fa788a41e5bd591caf4413528, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 0}
+  muzzle: {fileID: 1530034948}
+  curAmmo: 0
+  maxAmmo: 0
+  infiniteAmmo: 0
+  shootRate: 0
+  bulletSpeed: 0
 --- !u!1 &1934461334
 GameObject:
   m_ObjectHideFlags: 0
