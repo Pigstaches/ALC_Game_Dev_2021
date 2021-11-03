@@ -13,7 +13,7 @@ public class ObjectPool : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for(int x = 0;x < createOnStart; x++)
+        for(int x = 0; x < createOnStart; x++)
         {
             CreateNewObject();
         }

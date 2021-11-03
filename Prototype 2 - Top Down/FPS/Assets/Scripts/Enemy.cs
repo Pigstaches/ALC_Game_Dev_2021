@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
 
     [Header("Stats")]
     public int curHP;
-    public int massHP;
+    public int maxHP;
     public int scoreToGive;
 
     [Header("Movement")]
@@ -24,6 +24,8 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        curHP = maxHP;
+        
         //Gather the Components
         weapon = GetComponent<Weapons>();
         target = FindObjectOfType<PlayerController>().gameObject;

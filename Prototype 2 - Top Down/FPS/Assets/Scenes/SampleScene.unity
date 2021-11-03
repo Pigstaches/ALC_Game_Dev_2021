@@ -565,7 +565,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 959021343}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.45, y: 1.4, z: -5.43}
+  m_LocalPosition: {x: 12.21, y: 1.4, z: 16.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 963194228}
@@ -623,7 +623,7 @@ MonoBehaviour:
   curAmmo: 0
   maxAmmo: 0
   infiniteAmmo: 1
-  shootRate: 0.03
+  shootRate: 1
   bulletSpeed: 10
 --- !u!114 &959021351
 MonoBehaviour:
@@ -715,14 +715,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: -0, y: -0.6493443, z: -0, w: 0.76049465}
-  m_LocalPosition: {x: 0.268, y: 0.767, z: -0.057}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.26799965, y: 0.7670001, z: -0.056999207}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1511848261}
   m_Father: {fileID: 959021347}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -80.984, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1177349144
 GameObject:
   m_ObjectHideFlags: 0
@@ -949,7 +949,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objPrefab: {fileID: 9047697825293167144, guid: ece5b275848bc49d3b8f9d57709f7b71, type: 3}
-  createOnStart: 0
+  createOnStart: 10
 --- !u!114 &1405575542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -968,8 +968,8 @@ MonoBehaviour:
   curAmmo: 0
   maxAmmo: 0
   infiniteAmmo: 1
-  shootRate: 0.03
-  bulletSpeed: 10
+  shootRate: 1
+  bulletSpeed: 5
 --- !u!54 &1405575544
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1077,8 +1077,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curHP: 1
-  massHP: 1
-  scoreToGive: 1000
+  maxHP: 1
+  scoreToGive: 100
   moveSpeed: 3
   attackRange: 5
   yPathOffset: 1
@@ -1108,14 +1108,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1511848260}
-  m_LocalRotation: {x: 0.42262295, y: 0.43058223, z: 0.56616277, w: 0.56164813}
-  m_LocalPosition: {x: 0.343, y: -0.576, z: 1.027}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.493, y: -0.652, z: 0.603}
   m_LocalScale: {x: 0.32202083, y: 0.32202077, z: 0.32202074}
   m_Children:
   - {fileID: 1530034948}
   m_Father: {fileID: 963194228}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -0.735, y: 74.217, z: 89.903}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &1511848262
 CapsuleCollider:
   m_ObjectHideFlags: 0
