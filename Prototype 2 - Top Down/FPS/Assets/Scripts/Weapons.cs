@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Weapons : MonoBehaviour
 {
-    public ObjectPool bulletPool;
-    public GameObject bulletPrefab; 
+    public ObjectPool bulletPool; 
     public Transform muzzle;
 
     public int curAmmo;
@@ -50,5 +49,15 @@ public class Weapons : MonoBehaviour
         //set the velocity
         bullet.GetComponent<Rigidbody>().velocity = muzzle.forward * bulletSpeed;
 
+    }
+
+    void Start()
+    {
+
+    }
+
+    void Update()
+    {
+        
     }
 }

@@ -32,7 +32,7 @@ public class ObjectPool : MonoBehaviour
     {
         GameObject obj = pooledObjs.Find(x => x.activeInHierarchy == false);
 
-        if(obj == null)
+        if(obj ==null)
         {
             obj = CreateNewObject();
         }

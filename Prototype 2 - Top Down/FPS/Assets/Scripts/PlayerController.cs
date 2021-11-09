@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    //movement
+    [Header("movement")]
     public float moveSpeed;
     public float jumpForce;
-
-    //camera
+    [Header("Controls")]
     public float lookSensitivity; //mouse look sensitivity
     public float maxLookX; // lowest down positiion we can look
     public float minLookX; //highest up position we can look
     private float rotX; //current x rotation of the camera
-    //gameObjects and components
+    [Header("GameObjects and Components")]
     private Camera cam;
     private Rigidbody rb;
     private Weapons weapons; 
+    [Header("Stats")]
+    public int curHP;
+    public int maxHP;
 
     void Awake()
     {
@@ -26,6 +28,18 @@ public class PlayerController : MonoBehaviour
         weapons = GetComponent<Weapons>();
         //disable cursor
         Cursor.lockState = CursorLockMode.Locked;
+
+    }
+
+    public void TakeDamage(int damage)
+    {
+        curHP -= damage;
+        if(curHP <= 0)
+            Die();
+    }
+
+    void Die()
+    {
 
     }
 
