@@ -17,6 +17,7 @@ public class Pickup : MonoBehaviour
     public float rotationSpeed;
     public float bobSpeed;
     public float bobHeight;
+
     private Vector3 startPos;
     private bool bobbingUp;
 
@@ -39,12 +40,13 @@ public class Pickup : MonoBehaviour
                 player.GiveHealth(value);
                 break; 
 
-                case PickupType.ammo:
+                case PickupType.Ammo:
                 player.GiveAmmo(value);
                 break;
             }
 
             Destroy(gameObject);
+
         }
     }
 
@@ -53,10 +55,11 @@ public class Pickup : MonoBehaviour
     {
         transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
 
-        Vector3 offset = (bobbingUp == true ? new Vector3(0,bobHeight / 2, 0) : new Vector3(0, -bobHeight /2, 0);
+        Vector3 offset = (bobbingUp == true ? new Vector3(0,bobHeight / 2, 0) : new Vector3(0, -bobHeight /2, 0));
         transform.position = Vector3.MoveTowards(transform.position, startPos + offset, bobSpeed * Time.deltaTime);
         
-        if(transform.position == startPosition + offset)
+        if(transform.position == startPos + offset)
             bobbingUp = !bobbingUp;
+            
     }
 }

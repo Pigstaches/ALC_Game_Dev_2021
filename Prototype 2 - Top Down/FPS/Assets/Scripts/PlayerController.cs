@@ -101,7 +101,7 @@ public class PlayerController : MonoBehaviour
 
     public void GiveAmmo (int amountToGive)
     {
-        weapons.curAmmo = Mathf.Clamp(weapon.curAmmo + amountToGive, 0, weapon.maxAmmo);
+        weapons.curAmmo = Mathf.Clamp(weapons.curAmmo + amountToGive, 0, weapons.maxAmmo);
     }
 
 }

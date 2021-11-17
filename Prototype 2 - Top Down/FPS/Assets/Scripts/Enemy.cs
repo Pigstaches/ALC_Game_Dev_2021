@@ -21,6 +21,8 @@ public class Enemy : MonoBehaviour
     private Weapons weapon;
     private GameObject target; 
 
+    private Rigidbody rb;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +33,7 @@ public class Enemy : MonoBehaviour
         target = FindObjectOfType<PlayerController>().gameObject;
 
         InvokeRepeating("UpdatePath", 0.0f, 0.5f);
+
     }
 
     void UpdatePath()
@@ -48,6 +51,7 @@ public class Enemy : MonoBehaviour
     {
         if(path.Count == 0)
             return;
+
         //move towards the closest pat
         transform.position = Vector3.MoveTowards(transform.position, path[0] + new Vector3(0, yPathOffset, 0), moveSpeed * Time.deltaTime);
         
@@ -66,7 +70,10 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-       Destroy(gameObject);
+        rb.constraints = RigidbodyConstraints.None;
+        rb.AddForce(Vector3.back * 10, ForceMode.Impulse);
+        rb.AddForce(Vector3.up * 5, ForceMode.Impulse);
+        Destroy(gameObject, 1);
     }
 
     // Update is called once per frame
@@ -83,7 +90,7 @@ public class Enemy : MonoBehaviour
 
         if(dist <= attackRange)
         {
-            if (weapon.CanShoot());
+            if(weapon.CanShoot())
                 weapon.Shoot();
         }
         else

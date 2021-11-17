@@ -7,6 +7,8 @@ public class Weapons : MonoBehaviour
     public ObjectPool bulletPool; 
     public Transform muzzle;
 
+    public float bulletSpeed;
+
     public int curAmmo;
     public int maxAmmo;
     public bool infiniteAmmo;
@@ -15,7 +17,7 @@ public class Weapons : MonoBehaviour
     private float lastShootTime;
     private bool isPlayer;
 
-    public float bulletSpeed;
+
 
     void Awake()
     {
@@ -49,15 +51,5 @@ public class Weapons : MonoBehaviour
         //set the velocity
         bullet.GetComponent<Rigidbody>().velocity = muzzle.forward * bulletSpeed;
 
-    }
-
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-        
     }
 }
