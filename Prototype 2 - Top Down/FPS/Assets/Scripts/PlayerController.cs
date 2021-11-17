@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     [Header("movement")]
     public float moveSpeed;
     public float jumpForce;
-    [Header("Controls")]
+    [Header("Camera")]
     public float lookSensitivity; //mouse look sensitivity
     public float maxLookX; // lowest down positiion we can look
     public float minLookX; //highest up position we can look
