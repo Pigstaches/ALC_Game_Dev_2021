@@ -5,6 +5,7 @@ using UnityEngine;
 public class Weapons : MonoBehaviour
 {
     public ObjectPool bulletPool; 
+    public GameObject bulletPrefab;
     public Transform muzzle;
 
     public float bulletSpeed;
