@@ -70,10 +70,7 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        rb.constraints = RigidbodyConstraints.None;
-        rb.AddForce(Vector3.back * 10, ForceMode.Impulse);
-        rb.AddForce(Vector3.up * 5, ForceMode.Impulse);
-        Destroy(gameObject, 1);
+        Destroy(gameObject);
     }
 
     // Update is called once per frame
