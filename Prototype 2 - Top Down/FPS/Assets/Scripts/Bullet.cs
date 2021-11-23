@@ -33,7 +33,7 @@ public class Bullet : MonoBehaviour
             other.GetComponent<PlayerController>().TakeDamage(damage);
         else 
             if(other.CompareTag("Enemy"))
-            other.GetComponent<Enemy>().TakeDamage(damage);
+                other.GetComponent<Enemy>().TakeDamage(damage);
 
         //Disable Bullet
         gameObject.SetActive(false);
@@ -45,6 +45,6 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         if(Time.time - shootTime >= lifetime)
-        gameObject.SetActive(false);
+            gameObject.SetActive(false);
     }
 }
