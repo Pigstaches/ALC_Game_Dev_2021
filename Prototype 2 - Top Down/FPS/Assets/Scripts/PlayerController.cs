@@ -28,7 +28,6 @@ public class PlayerController : MonoBehaviour
         weapons = GetComponent<Weapons>();
         //disable cursor
         Cursor.lockState = CursorLockMode.Locked;
-
     }
 
     public void TakeDamage(int damage)
@@ -37,7 +36,6 @@ public class PlayerController : MonoBehaviour
         if(curHP <= 0)
             Die();
     }
-
     void Die()
     {
 

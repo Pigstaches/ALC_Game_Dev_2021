@@ -21,8 +21,11 @@ public class ObjectPool : MonoBehaviour
 
     GameObject CreateNewObject()
     {
+        // create gameobject
         GameObject obj = Instantiate(objPrefab);
+        //Deactivate object
         obj.SetActive(false);
+        //add object to the pool of existing objects
         pooledObjs.Add(obj);
 
         return obj;
@@ -32,7 +35,7 @@ public class ObjectPool : MonoBehaviour
     {
         GameObject obj = pooledObjs.Find(x => x.activeInHierarchy == false);
 
-        if(obj ==null)
+        if(obj == null)
         {
             obj = CreateNewObject();
         }

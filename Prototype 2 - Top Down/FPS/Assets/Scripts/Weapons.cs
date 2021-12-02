@@ -5,7 +5,6 @@ using UnityEngine;
 public class Weapons : MonoBehaviour
 {
     public ObjectPool bulletPool; 
-    public GameObject bulletPrefab;
     public Transform muzzle;
 
     public float bulletSpeed;
@@ -51,6 +50,5 @@ public class Weapons : MonoBehaviour
 
         //set the velocity
         bullet.GetComponent<Rigidbody>().velocity = muzzle.forward * bulletSpeed;
-
     }
 }

@@ -21,7 +21,6 @@ public class Pickup : MonoBehaviour
     private Vector3 startPos;
     private bool bobbingUp;
 
-    // Start is called before the first frame update
     void Start()
     {
         //Set the start position
@@ -53,8 +52,10 @@ public class Pickup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //rotating
         transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
 
+        //bob up and down
         Vector3 offset = (bobbingUp == true ? new Vector3(0,bobHeight / 2, 0) : new Vector3(0, -bobHeight /2, 0));
         transform.position = Vector3.MoveTowards(transform.position, startPos + offset, bobSpeed * Time.deltaTime);
         

@@ -483,8 +483,8 @@ GameObject:
   - component: {fileID: 959021346}
   - component: {fileID: 959021345}
   - component: {fileID: 959021344}
-  - component: {fileID: 959021349}
   - component: {fileID: 959021348}
+  - component: {fileID: 959021349}
   - component: {fileID: 959021350}
   - component: {fileID: 959021351}
   m_Layer: 0
@@ -620,7 +620,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPool: {fileID: 959021351}
-  bulletPrefab: {fileID: 9047697825293167144, guid: ece5b275848bc49d3b8f9d57709f7b71, type: 3}
   muzzle: {fileID: 1530034948}
   bulletSpeed: 20
   curAmmo: 10
@@ -965,7 +964,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPool: {fileID: 1405575541}
-  bulletPrefab: {fileID: 9047697825293167144, guid: ece5b275848bc49d3b8f9d57709f7b71, type: 3}
   muzzle: {fileID: 621917591}
   bulletSpeed: 10
   curAmmo: 10

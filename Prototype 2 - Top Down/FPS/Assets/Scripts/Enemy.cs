@@ -15,13 +15,16 @@ public class Enemy : MonoBehaviour
     [Header("Movement")]
     public float moveSpeed;
     public float attackRange;
+
     public float yPathOffset; 
 
     private List<Vector3> path;
+
     private Weapons weapon;
     private GameObject target; 
 
     private Rigidbody rb;
+
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +34,7 @@ public class Enemy : MonoBehaviour
         //Gather the Components
         weapon = GetComponent<Weapons>();
         target = FindObjectOfType<PlayerController>().gameObject;
+        rb = GetComponent<Rigidbody>();
 
         InvokeRepeating("UpdatePath", 0.0f, 0.5f);
 
@@ -45,7 +49,6 @@ public class Enemy : MonoBehaviour
         //Save path as a list 
         path = navMeshPath.corners.ToList();
     }
-
 
     void ChaseTarget()
     {
@@ -70,7 +73,10 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        Destroy(gameObject);
+        rb.constraints = RigidbodyConstraints.None;
+        rb.AddForce(Vector3.back * 10, ForceMode.Impulse);
+        rb.AddForce(Vector3.up * 5, ForceMode.Impulse);
+        Destroy(gameObject,1);
     }
 
     // Update is called once per frame
