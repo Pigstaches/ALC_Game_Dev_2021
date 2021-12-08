@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class GameUi : MonoBehaviour
+public class GameUI : MonoBehaviour
 {
     [Header("Hud")]
     public TextMeshProUGUI scoreText;
