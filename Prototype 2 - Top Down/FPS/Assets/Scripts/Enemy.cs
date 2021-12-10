@@ -76,6 +76,7 @@ public class Enemy : MonoBehaviour
         rb.constraints = RigidbodyConstraints.None;
         rb.AddForce(Vector3.back * 10, ForceMode.Impulse);
         rb.AddForce(Vector3.up * 5, ForceMode.Impulse);
+        GameMangaer.instance.AddScore(scoreToGive);
         Destroy(gameObject,1);
     }
 
