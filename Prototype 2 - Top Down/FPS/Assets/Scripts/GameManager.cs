@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
     {
         // freeze game
         gamePaused = !gamePaused;
-        Time.timeScale = gamePaused = true ? 0.0f : 1.0f;
+        Time.timeScale = gamePaused == true ? 0.0f : 1.0f;
 
         //Toggle pause menu
         GameUI.instance.TogglePauseMenu(gamePaused);
