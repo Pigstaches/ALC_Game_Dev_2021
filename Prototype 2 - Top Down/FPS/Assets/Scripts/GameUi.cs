@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class GameUI : MonoBehaviour
 {
-    [Header("Hud")]
+    [Header("HUD")]
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI ammoText;
     public Image healthBarFill;
