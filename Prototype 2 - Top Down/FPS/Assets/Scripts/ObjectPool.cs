@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class ObjectPool : MonoBehaviour
 {
+    // what game object is pooled
     public GameObject objPrefab;
-    
+    //how many game objects to pool
     public int createOnStart;
-
+    //store all of the pooled game objects (Projectiles)
     private List<GameObject> pooledObjs = new List<GameObject>();
 
     // Start is called before the first frame update

@@ -20,7 +20,6 @@ public class Pickup : MonoBehaviour
 
     private Vector3 startPos;
     private bool bobbingUp;
-
     public AudioClip pickupSfx;
 
     void Start()

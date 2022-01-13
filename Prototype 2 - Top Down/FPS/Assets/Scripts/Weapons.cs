@@ -30,6 +30,7 @@ public class Weapons : MonoBehaviour
             isPlayer = true;
             
         }
+        
         audioSource = GetComponent<AudioSource>();
     }
     
